@@ -1,0 +1,25 @@
+.close-btn {
+    font-size: 32px;
+}
+
+.question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.answers {
+    .answer {}
+}
+
+.progress-container {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .progress {
+        height: 12px;
+    }
+}

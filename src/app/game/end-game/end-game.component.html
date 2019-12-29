@@ -1,0 +1,11 @@
+<ion-content>
+  <img class="logo" src="/assets/ue-logo.jpg" />
+
+  <h2> Your score is: {{score}}</h2>
+  <p>Why are you so bad?</p>
+
+  <div class="buttons">
+    <ion-button color="primary" expand="full" routerLink="/game" (click)="dismiss()">Zagraj ponownie</ion-button>
+    <ion-button color="secondary" expand="full" routerLink="/home" (click)="dismiss()">Powrót do menu</ion-button>
+  </div>
+</ion-content>
