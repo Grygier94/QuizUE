@@ -15,12 +15,20 @@ export class GamePage implements OnInit {
 
   timer: any;
   question: Question;
-  time = 25.0;
+  totalTime = 5.0;
+  time = this.totalTime;
   timeProgress = 0;
   score = 0;
   questionIndex = 0;
   time2 = new Observable((observer) => {
-    
+    //TODO: Create observer
+    //TODO: Create ranking 
+    //TODO: Create samouczek
+    //TODO: Create pomoc
+    //TODO: Create achievementy
+    //TODO: Create szukanie znajomych ?? zmienic na lupe ??
+    //TODO: Create ustawienia
+    //TODO: Implement wyjscie
   });
 
   constructor(public toastController: ToastController,
@@ -30,6 +38,10 @@ export class GamePage implements OnInit {
   ngOnInit() {
     this.question = this.gameService.getQuestion();
     this.initTimer();
+  }
+    
+  ionViewWillLeave(){
+    this.timer.unsubscribe();
   }
 
   submitAnswer(answer) {
@@ -59,7 +71,7 @@ export class GamePage implements OnInit {
   }
 
   private nextQuestion() {
-    this.time = 10;
+    this.time = this.totalTime;
     this.questionIndex++;
     this.question = this.gameService.getQuestion();
   }
