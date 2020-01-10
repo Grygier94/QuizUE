@@ -1,0 +1,61 @@
+h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.top-section {
+    padding: 15px;
+    color: var(--ion-color-primary-contrast);
+    background: var(--ion-color-primary);
+
+    .top-icons {
+        display: flex;
+        justify-content: space-between;
+        font-size: 32px;
+    }
+
+    h1 {
+        text-align: center;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-picture {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        display: block;
+        margin: 20px auto;
+    }
+}
+
+.bottom-section {
+    .user-info {
+        color: var(--ion-color-primary);
+        background-color: var(--ion-color-primary-contrast);
+        border: 3px solid var(--ion-color-primary);
+
+        padding: 40px 20px;
+        margin: 50px 50px 0 50px;
+        bottom: 0;
+
+        div {
+            margin: 10px 0;
+            text-align: center;
+        }
+    }
+
+    .bottom-icons {
+        color: black;
+        font-size: 36px;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 15px;
+        color: var(--ion-color-primary);
+    }
+}
