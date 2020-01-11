@@ -7,12 +7,14 @@
 <ion-content>
   <div class="top-section">
     <div class="top-icons">
-      <ion-icon name="settings"></ion-icon>
-      <ion-icon name="notifications"></ion-icon>
+      <ion-icon name="settings" routerLink="/settings"></ion-icon>
+      <ion-icon name="notifications" (click)="showNotifications()"></ion-icon>
     </div>
     <img class="profile-picture" src="/assets/default-user-picture.jpg" />
     <h1>Jan Kowalski</h1>
   </div>
+  <app-notifications [hidden]="notificationsHidden" (close)="hideNotifications()"></app-notifications>
+
   <div class="bottom-section">
     <div class="user-info">
       <h2>Dane gracza</h2>
@@ -21,8 +23,9 @@
       <div>Najlepszy wynik: 99</div>
     </div>
     <div class="bottom-icons">
-      <ion-icon name="people"></ion-icon>
-      <ion-icon name="trophy"></ion-icon>
+      <ion-icon name="search" routerLink="/player-search"></ion-icon>
+      <ion-icon name="people" routerLink="/friends"></ion-icon>
+      <ion-icon name="trophy" routerLink="/achievements"></ion-icon>
       <ion-icon name="mail-open" routerLink="/messages"></ion-icon>
     </div>
   </div>

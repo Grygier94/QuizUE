@@ -9,7 +9,16 @@ export class ProfilePage implements OnInit {
 
   constructor() { }
 
+  notificationsHidden = true;
+
   ngOnInit() {
   }
 
+  showNotifications(){
+    this.notificationsHidden = false;
+  }
+
+  hideNotifications(){
+    this.notificationsHidden = true;
+  }
 }
