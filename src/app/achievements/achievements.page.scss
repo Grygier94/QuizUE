@@ -1,0 +1,52 @@
+.achievements {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
+
+    .achievement-container {
+        width: 48%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        .achievement-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 35px;
+            padding-bottom: 15px;
+
+            ion-icon {
+                font-size: 48px;
+                color: var(--ion-color-primary);
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        .achievement-indicator {
+            background-color: #f65842;
+            color: #fff;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 6px;
+
+            ion-icon {
+                color: #fff;
+                font-size: 26px;
+                font-weight: bold;
+            }
+
+            &.achieved {
+                background-color: #42c088;
+            }
+        }
+    }
+}

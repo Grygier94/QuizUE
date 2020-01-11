@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Osiągnięcia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="achievements">
+    <div class="achievement-container" *ngFor="let achievement of achievements">
+      <div class="achievement-content">
+        <ion-icon [name]="achievement.icon"></ion-icon>
+        <p>{{ achievement.name }}</p>
+      </div>
+      <div class="achievement-indicator" [class.achieved]="achievement.achieved">
+        <ion-icon *ngIf="achievement.achieved" name="checkmark-circle"></ion-icon>
+        <ion-icon *ngIf="!achievement.achieved" name="close-circle"></ion-icon>
+      </div>
+    </div>
+  </div>
+</ion-content>
