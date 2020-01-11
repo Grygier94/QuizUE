@@ -1,0 +1,32 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>Ranking</ion-title>
+  </ion-toolbar>
+  <ion-item class="current-user" color="primary">
+    <h1 class="place" slot="start">{{currentUser.place}}</h1>
+    <ion-avatar slot="start">
+      <img [src]="currentUser.avatar">
+    </ion-avatar>
+    <ion-label>
+      <h2>{{currentUser.name}}</h2>
+      <p>{{currentUser.description}}</p>
+    </ion-label>
+    <h1>{{currentUser.score}}<small>pkt</small></h1>
+  </ion-item>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-list>
+    <ion-item *ngFor="let user of users; let i = index" [color]="user.name == currentUser.name ? 'primary' : ''">
+      <h1 class="place" slot="start">{{i + 1}}</h1>
+      <ion-avatar slot="start">
+        <img [src]="user.avatar">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{user.name}}</h2>
+        <p>{{user.description}}</p>
+      </ion-label>
+      <h2>{{user.score}}<small>pkt</small></h2>
+    </ion-item>
+  </ion-list>
+</ion-content>
