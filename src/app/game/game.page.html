@@ -4,19 +4,15 @@
       <p class="question-number">{{questionIndex + 1}} / 10</p>
     </div>
     <ion-title>{{time.toFixed(2)}}</ion-title>
-    <ion-buttons slot="end">
-      <ion-button class="close-btn" routerLink="/home" routerDirection=“back”>
-        <ion-icon name="close"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+    <ion-icon class="close-btn" name="close" routerLink="/home" routerDirection="back" slot="end"></ion-icon>
   </ion-toolbar>
 </ion-header>
-<div class="progress-container">
-  <ion-progress-bar class="progress" color="secondary" value="0.4"></ion-progress-bar>
-  <!-- <ion-progress-bar class="progress" color="secondary" value="{{timeProgress]}"></ion-progress-bar> -->
-</div>
 
 <ion-content>
+  <div class="progress-container">
+    <ion-progress-bar class="progress" color="secondary" value="0.4"></ion-progress-bar>
+    <!-- <ion-progress-bar class="progress" color="secondary" value="{{timeProgress]}"></ion-progress-bar> -->
+  </div>
   <div class="question">
     {{ question.content }}
   </div>
@@ -24,5 +20,5 @@
     <ion-button *ngFor="let answer of question.answers; let i = index" color="primary" expand="full" class="answer"
       (click)="submitAnswer(answer)">
       {{ answer.content }}</ion-button>
-</div>
+  </div>
 </ion-content>
