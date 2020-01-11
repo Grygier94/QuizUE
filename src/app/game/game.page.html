@@ -1,10 +1,10 @@
 <ion-header>
   <ion-toolbar>
-    <div start="beginning">
+    <div class="toolbar-container">
       <p class="question-number">{{questionIndex + 1}} / 10</p>
+      <h4>{{time.toFixed(2)}}</h4>
+      <ion-icon class="close-btn" name="close" routerLink="/home" routerDirection="back"></ion-icon>
     </div>
-    <ion-title>{{time.toFixed(2)}}</ion-title>
-    <ion-icon class="close-btn" name="close" routerLink="/home" routerDirection="back" slot="end"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
@@ -16,7 +16,7 @@
   <div class="question">
     {{ question.content }}
   </div>
-  <div class=" answers">
+  <div class="answers">
     <ion-button *ngFor="let answer of question.answers; let i = index" color="primary" expand="full" class="answer"
       (click)="submitAnswer(answer)">
       {{ answer.content }}</ion-button>
