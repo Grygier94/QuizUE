@@ -12,21 +12,21 @@ export class GameService {
   index = -1;
   questions: Question[] = [
     {
-      content: "Question 1",
+      content: "Pytanie 1",
       answers: [
-        { content: "corr", isCorrect: true },
-        { content: "test", isCorrect: false },
-        { content: "test2", isCorrect: false },
-        { content: "test23", isCorrect: false }
+        { content: "Odpowiedź poprawna", isCorrect: true },
+        { content: "Zła odpowiedź 1", isCorrect: false },
+        { content: "Zła odpowiedź 2", isCorrect: false },
+        { content: "Zła odpowiedź 3", isCorrect: false }
       ]
     },
     {
-      content: "Question 2",
+      content: "Pytanie 2",
       answers: [
-        { content: "1", isCorrect: true },
-        { content: "2", isCorrect: false },
-        { content: "3", isCorrect: false },
-        { content: "4", isCorrect: false }
+        { content: "Zła odpowiedź 1", isCorrect: false },
+        { content: "Odpowiedź poprawna", isCorrect: true },
+        { content: "Zła odpowiedź 2", isCorrect: false },
+        { content: "Zła odpowiedź 3", isCorrect: false }
       ]
     }
   ]

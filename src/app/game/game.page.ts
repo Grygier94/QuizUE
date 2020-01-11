@@ -15,20 +15,16 @@ export class GamePage implements OnInit {
 
   timer: any;
   question: Question;
-  totalTime = 5.0;
+  totalTime = 15.0;
   time = this.totalTime;
   timeProgress = 0;
   score = 0;
   questionIndex = 0;
   time2 = new Observable((observer) => {
-    //TODO: Create observer
-    //TODO: Create ranking 
-    //TODO: Create samouczek
+    //TODO: Create ranking  
     //TODO: Create pomoc
-    //TODO: Create achievementy
-    //TODO: Create szukanie znajomych ?? zmienic na lupe ??
-    //TODO: Create ustawienia
     //TODO: Implement wyjscie
+    //TODO: Create observer
   });
 
   constructor(public toastController: ToastController,
@@ -57,16 +53,16 @@ export class GamePage implements OnInit {
   }
 
   private answerCorrect() {
-    this.presentToast("Answer correct!")
+    this.presentToast("Poprawna odpowiedź!")
     this.score++;
   }
 
   private answerIncorrect() {
-    this.presentToast("Answer incorrect!");
+    this.presentToast("Zła odpowiedź!");
   }
 
   private timesUp() {
-    this.presentToast("Time's up!");
+    this.presentToast("Koniec czasu!");
     this.nextQuestion();
   }
 
@@ -81,7 +77,7 @@ export class GamePage implements OnInit {
     if (this.time < 0)
       this.time = 0;
 
-    this.presentToast("Game Over, Bitch!");
+    this.presentToast("Gra skończona!");
     this.presentEndGameModal();
   }
 
