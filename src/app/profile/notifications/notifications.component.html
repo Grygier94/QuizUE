@@ -1,0 +1,17 @@
+<div class="component-container">
+  <div class="notifications-container">
+    <div class="top-bar">
+      <h1>Powiadomienia</h1>
+      <ion-icon name="close" (click)="closeNotifications()"></ion-icon>
+    </div>
+    <div class="notification" *ngFor="let notification of notifications">
+      <ion-icon name="notifications"></ion-icon>
+      <div class="content">
+        <h2>{{ notification.header }}</h2>
+        <p>{{ notification.content }}</p>
+      </div>
+      <p class="time">{{ notification.time }}</p>
+    </div>
+  </div>
+  <div class="backdrop"></div>
+</div>
