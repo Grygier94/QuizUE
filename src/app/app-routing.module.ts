@@ -50,6 +50,10 @@ const routes: Routes = [
   {
     path: 'help',
     loadChildren: () => import('./help/help.module').then( m => m.HelpPageModule)
+  },
+  {
+    path: 'game-menu',
+    loadChildren: () => import('./game-menu/game-menu.module').then( m => m.GameMenuPageModule)
   }
 ];
 
