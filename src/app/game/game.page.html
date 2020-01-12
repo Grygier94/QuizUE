@@ -10,8 +10,7 @@
 
 <ion-content>
   <div class="progress-container">
-    <ion-progress-bar class="progress" color="secondary" value="0.4"></ion-progress-bar>
-    <!-- <ion-progress-bar class="progress" color="secondary" value="{{timeProgress]}"></ion-progress-bar> -->
+    <ion-progress-bar class="progress" color="secondary" [value]="timeProgress"></ion-progress-bar>
   </div>
   <div class="question">
     {{ question.content }}

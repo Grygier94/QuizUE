@@ -20,12 +20,6 @@ export class GamePage implements OnInit {
   timeProgress = 0;
   score = 0;
   questionIndex = 0;
-  time2 = new Observable((observer) => {
-    //TODO: Create ranking  
-    //TODO: Create pomoc
-    //TODO: Implement wyjscie
-    //TODO: Create observer
-  });
 
   constructor(public toastController: ToastController,
     private modalController: ModalController,
@@ -85,6 +79,8 @@ export class GamePage implements OnInit {
     this.timer = interval(10)
       .subscribe((val) => {
         this.time -= 0.01;
+        this.timeProgress = this.time / this.totalTime;
+
         if (this.time <= 0)
           this.timesUp();
       });
