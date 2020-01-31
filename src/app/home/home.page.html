@@ -1,14 +1,3 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
-  </ion-toolbar>
-</ion-header> -->
-
 <ion-content>
   <div class="user-panel">
     <span>Jan Kowalski</span>
@@ -18,5 +7,5 @@
   <ion-button color="primary" expand="full" routerLink="/game-menu">Graj</ion-button>
   <ion-button color="primary" expand="full" routerLink="/ranking">Ranking</ion-button>
   <ion-button color="primary" expand="full" routerLink="/help">Pomoc</ion-button>
-  <ion-button color="primary" expand="full">Wyjście</ion-button>
+  <ion-button color="primary" expand="full" (click)="exit()">Wyjście</ion-button>
 </ion-content>
