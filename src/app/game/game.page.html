@@ -18,6 +18,7 @@
   <div class="answers">
     <ion-button *ngFor="let answer of question.answers; let i = index" color="primary" expand="full" class="answer"
       (click)="submitAnswer(answer)">
-      {{ answer.content }}</ion-button>
+      <span>{{ answer.content }}</span>
+    </ion-button>
   </div>
 </ion-content>

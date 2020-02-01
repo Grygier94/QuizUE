@@ -112,7 +112,7 @@ export class GamePage implements OnInit {
   }
 
   private setDefaults() {
-    this.time = 10.0;
+    this.time = this.totalTime;
     this.score = 0;
     this.questionIndex = 0;
   }

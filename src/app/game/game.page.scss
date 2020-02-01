@@ -23,6 +23,22 @@
     justify-content: center;
     align-items: center;
     min-height: 300px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+}
+
+.answers {
+    ion-button {
+        height: auto;
+
+        span {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            line-height: 1.5;
+            white-space: normal;
+        }
+    }
 }
 
 .progress-container {
