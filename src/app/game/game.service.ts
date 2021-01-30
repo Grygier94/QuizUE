@@ -23,7 +23,7 @@ export class GameService {
     {
       content: "Które budynki są połączone korytarzem?",
       answers: [
-        { content: "A, B, C", isCorrect: false },
+        { content: "A, B", isCorrect: true },
         { content: "D, E", isCorrect: false },
         { content: "F, G", isCorrect: false },
         { content: "N, P, C", isCorrect: false }
